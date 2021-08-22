@@ -13,7 +13,7 @@ module.exports = {
       return {
         id: blog.id,
         title: blog.title,
-        slug: `${blog.title.split(" ").join("-")}-#${blog.id}`,
+        slug: blog.slug,
         excerpt: blog.excerpt,
         created_at: blog.created_at,
         cover_image: blog.cover_image,

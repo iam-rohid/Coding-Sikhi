@@ -18,8 +18,8 @@
       "maxLength": 50
     },
     "blogs": {
-      "collection": "blog",
       "via": "categories",
+      "collection": "blog",
       "dominant": true
     }
   }
