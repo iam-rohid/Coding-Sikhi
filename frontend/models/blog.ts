@@ -4,8 +4,9 @@ export interface BlogInterface {
   id: string;
   slug: string;
   title: string;
-  excerpt: string;
-  categories: CategoryInterface[];
+  excerpt?: string;
+  body?: string;
+  categories?: CategoryInterface[];
   cover_image: StrapiImageInterface;
   created_at: string;
   created_by: any;

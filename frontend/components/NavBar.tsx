@@ -6,7 +6,7 @@ import Logo from "./Logo";
 const NavBar = () => {
   function searchButton() {
     return (
-      <button className="flex flex-row items-center px-4 space-x-2 py-2 text-gray-400 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 active:bg-gray-300 dark:hover:bg-gray-600 dark:active:bg-gray-700">
+      <button className="flex flex-row items-center px-4 space-x-2 py-2 text-gray-400 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600">
         <SearchIcon className="w-6 h-6" />
         <span>Search (click "/" to search)</span>
       </button>
@@ -14,7 +14,7 @@ const NavBar = () => {
   }
   function logInButton() {
     return (
-      <button className="px-6 py-2 rounded-lg bg-purple-500 text-white flex flex-row space-x-2 hover:bg-purple-500 active:bg-purple-600">
+      <button className="px-4 py-2 rounded-lg bg-purple-500 text-white flex flex-row space-x-2 hover:bg-purple-600 active:bg-purple-700">
         <LoginIcon className="w-6 h-6" />
         <p>Log In</p>
       </button>
@@ -24,7 +24,7 @@ const NavBar = () => {
     return (
       <Link href="/">
         <a>
-          <Logo className="h-8 w-auto" />
+          <Logo className="h-10 w-auto" />
         </a>
       </Link>
     );

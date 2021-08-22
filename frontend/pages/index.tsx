@@ -4,7 +4,7 @@ import StrapiImage from "../components/StrapiImage";
 import { fetchAPI } from "../lib/api";
 import { BlogInterface } from "../models/blog";
 
-const Index = () => {
+const HomePage = () => {
   const [data, setData] = useState<BlogInterface[]>([]);
   useEffect(() => {
     fetchAPI("/blogs").then((res) => {
@@ -21,4 +21,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HomePage;

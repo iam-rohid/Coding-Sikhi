@@ -16,3 +16,35 @@
     object-fit: cover;
   }
 }
+
+.prose {
+  max-width: 100%;
+  @apply text-gray-700 dark:text-gray-100;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  strong,
+  th {
+    @apply text-gray-900 dark:text-white;
+  }
+  p,
+  li,
+  h5,
+  h6 {
+    @apply text-gray-700 dark:text-gray-100;
+  }
+  a {
+    @apply text-purple-500 hover:text-purple-600;
+  }
+  code {
+    @apply text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1.5 rounded;
+  }
+  pre {
+    @apply bg-gray-900 dark:bg-black text-gray-100;
+  }
+  img {
+    @apply w-full;
+  }
+}
