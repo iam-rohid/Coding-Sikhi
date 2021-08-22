@@ -1,31 +1,23 @@
 import React, { useEffect, useState } from "react";
+import BlogCard from "../components/BlogCard";
 import StrapiImage from "../components/StrapiImage";
 import { fetchAPI } from "../lib/api";
+import { BlogInterface } from "../models/blog";
 
 const Index = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<BlogInterface[]>([]);
   useEffect(() => {
     fetchAPI("/blogs").then((res) => {
-      setData(res);
-      console.log(res);
+      setData(res as BlogInterface[]);
     });
     return () => {};
   }, []);
   return (
-    <ul>
-      {data &&
-        data.map((blog) => (
-          <li key={blog.id}>
-            <StrapiImage
-              img={blog.cover_image}
-              format="small"
-              className="w-80 h-40 overflow-hidden object-cover"
-            />
-            <h1>{blog.title}</h1>
-            <p>{blog.exerpt}</p>
-          </li>
-        ))}
-    </ul>
+    <div className="container py-8">
+      <div className="grid grid-cols-3 gap-10">
+        {data && data.map((blog) => <BlogCard blog={blog} key={blog.id} />)}
+      </div>
+    </div>
   );
 };
 
